@@ -791,69 +791,104 @@ body {
     .contact-form { padding: 24px 16px; }
 }
 
+
 /* ==========================================================================
-   2026 ULTRA-MOBILE OPTIMIZATION BREAKPOINT (Phones & Small Screens)
+   2026 PREMIUM MOBILE APERTIRE BREAKPOINT (Prevents Text & Element Compression)
    ========================================================================== */
 @media (max-width: 600px) {
-    /* 1. Global Document Constraint */
+    /* 1. Reset Global Enforcements */
+    * {
+        max-width: none !important; /* Removes structural clamping causing compressed text boxes */
+        word-break: normal !important; /* Stops words from broken splitting across lines */
+    }
+
     html, body {
-        position: relative;
-        width: 100vw;
-        overflow-x: hidden !important; /* Total shutdown of horizontal scrolling */
+        width: 100%;
+        overflow-x: hidden !important;
+        font-size: 15px; /* Sets a natural readable mobile baseline scale */
     }
 
     .container {
-        padding: 0 16px; /* Tightens padding so text gets more breathing room */
+        padding: 0 20px !important; /* Expands layout boundaries safely */
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    /* 2. Hero Grid Reset */
+    /* 2. De-compress the Hero Grid Layout */
+    .hero-section {
+        padding: 120px 0 60px 0 !important;
+    }
+
     .hero-grid {
-        grid-template-columns: 1fr !important; /* Switches layout from sideways to vertical stack */
-        gap: 24px !important;
+        display: flex !important;
+        flex-direction: column !important; /* Clean linear stack flow */
+        gap: 35px !important;
         text-align: center;
-        padding-top: 130px; /* Reduces excessive top spacing on mobile screens */
     }
 
     .hero-content h1 {
-        font-size: 2.25rem !important; /* Scales down massive headers so they don't break lines awkwardly */
-        line-height: 1.3;
+        font-size: 2.4rem !important; /* Spacious header size */
+        line-height: 1.3 !important;
+        letter-spacing: normal !important; /* Gives letters breathing room */
+        margin-bottom: 16px;
     }
 
     .lead-text {
-        font-size: 1.05rem !important;
-        margin-bottom: 24px;
+        font-size: 1.1rem !important;
+        line-height: 1.6 !important; /* Adds clear vertical separation between lines */
+        margin-bottom: 30px;
     }
 
-    /* 3. Scale Down the Profile Image Box */
+    /* 3. Balanced Profile Frame Size */
     .profile-frame {
-        width: 240px !important;  /* Shrinks the box so it fits cleanly on narrow phone screens */
-        height: 240px !important;
+        width: 250px !important;
+        height: 250px !important;
         margin: 0 auto;
+        border-radius: 20px;
     }
 
-    /* 4. Skills and Projects Layout Re-alignment */
+    /* 4. Open-Air Card System Padding */
     .skills-grid, 
     .projects-grid {
-        grid-template-columns: 1fr !important; /* Enforces a single neat row format per element */
-        gap: 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
     }
 
     .skill-card, 
     .project-card {
-        padding: 20px !important; /* Prevents container card padding from choking text boxes */
+        padding: 26px 20px !important; /* Maximizes horizontal surface space */
+        width: 100% !important;
+        box-sizing: border-box;
     }
 
-    /* 5. Timeline Path Constraint */
-    .timeline {
-        padding-left: 20px !important;
-    }
-    
-    .timeline-dot {
-        left: -31px !important; /* Readjusts chronological points so they sit neatly on the vertical axis */
+    .skill-card h3,
+    .project-card h3 {
+        font-size: 1.35rem !important;
+        margin-bottom: 8px;
     }
 
-    /* 6. Form Fields Constraint */
+    /* 5. Fluid Form Component Metrics */
+    .contact-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+
     .contact-form {
-        padding: 24px 16px !important; /* Shrinks the inner margins of your contact form cards */
+        padding: 30px 20px !important; /* Stops inputs from compressing horizontally */
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    .form-group input, 
+    .form-group textarea {
+        padding: 16px !important; /* Increases target input finger-space */
+        font-size: 1rem !important;
+    }
+
+    .email-link {
+        font-size: 1.35rem !important; /* Scales email size down smoothly so it doesn't clip */
+        word-break: break-all !important; /* Safely handles the address link boundary */
     }
 }
