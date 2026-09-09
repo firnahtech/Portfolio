@@ -790,3 +790,70 @@ body {
 @media (max-width: 480px) {
     .contact-form { padding: 24px 16px; }
 }
+
+/* ==========================================================================
+   2026 ULTRA-MOBILE OPTIMIZATION BREAKPOINT (Phones & Small Screens)
+   ========================================================================== */
+@media (max-width: 600px) {
+    /* 1. Global Document Constraint */
+    html, body {
+        position: relative;
+        width: 100vw;
+        overflow-x: hidden !important; /* Total shutdown of horizontal scrolling */
+    }
+
+    .container {
+        padding: 0 16px; /* Tightens padding so text gets more breathing room */
+    }
+
+    /* 2. Hero Grid Reset */
+    .hero-grid {
+        grid-template-columns: 1fr !important; /* Switches layout from sideways to vertical stack */
+        gap: 24px !important;
+        text-align: center;
+        padding-top: 130px; /* Reduces excessive top spacing on mobile screens */
+    }
+
+    .hero-content h1 {
+        font-size: 2.25rem !important; /* Scales down massive headers so they don't break lines awkwardly */
+        line-height: 1.3;
+    }
+
+    .lead-text {
+        font-size: 1.05rem !important;
+        margin-bottom: 24px;
+    }
+
+    /* 3. Scale Down the Profile Image Box */
+    .profile-frame {
+        width: 240px !important;  /* Shrinks the box so it fits cleanly on narrow phone screens */
+        height: 240px !important;
+        margin: 0 auto;
+    }
+
+    /* 4. Skills and Projects Layout Re-alignment */
+    .skills-grid, 
+    .projects-grid {
+        grid-template-columns: 1fr !important; /* Enforces a single neat row format per element */
+        gap: 16px !important;
+    }
+
+    .skill-card, 
+    .project-card {
+        padding: 20px !important; /* Prevents container card padding from choking text boxes */
+    }
+
+    /* 5. Timeline Path Constraint */
+    .timeline {
+        padding-left: 20px !important;
+    }
+    
+    .timeline-dot {
+        left: -31px !important; /* Readjusts chronological points so they sit neatly on the vertical axis */
+    }
+
+    /* 6. Form Fields Constraint */
+    .contact-form {
+        padding: 24px 16px !important; /* Shrinks the inner margins of your contact form cards */
+    }
+}
