@@ -1,5 +1,27 @@
 /* --- Global Theme & Variables --- */
-:root {
+@media (max-width 768px){
+    /*Stack all columns vertically */
+    .row, .cards, grid, [class*="flex"]{
+        flex-direction:column !important;
+    }
+    
+    /*Center everything that was left aligned */
+    section, .container{
+        align-items: center !important;
+        text-align:  center !important;
+    }
+    
+    /*.card, skill-card, .project-card {
+    width:  center !important;;
+    max-width:  center !important;
+    }
+
+    h1{
+    font-size :28px !important;
+    line-height: 1.2;
+    }
+    }
+    root {
     --bg-main: #0B0F19;
     --bg-card: rgba(17, 24, 39, 0.7);
     --border-color: rgba(255, 255, 255, 0.08);
