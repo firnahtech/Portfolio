@@ -20,7 +20,11 @@
             z-index: 999;
         }
         .nav-links.active{
-            display: flex !important;
+            display: flex !important; 
+            flex-direction: none;
+            width: 100%;
+            gap: 16px;
+            padding: 20px 0;
         }
         .hero, .section:first-of-type{
             padding-top: 70px !important;
