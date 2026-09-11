@@ -6,7 +6,8 @@
     }
     /*------MOBILE FIX---------*/
     @media (max-width: 768px){
-        .menu-toggle{ display: block !important;
+        .nav-links{
+            display: none; /*hide on mobile*/
                     }
         .nav-links{
             display: none !important;
@@ -19,6 +20,7 @@
             padding: 20px;
             z-index: 999;
         }
+    
         .nav-links.active{
             display: flex !important; 
             flex-direction: none;
@@ -26,6 +28,7 @@
             gap: 16px;
             padding: 20px 0;
         }
+    }
         .hero, .section:first-of-type{
             padding-top: 70px !important;
             min-height: auto !important;
