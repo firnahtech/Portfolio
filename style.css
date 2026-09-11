@@ -4,7 +4,34 @@
     .row, .cards, grid, [class*="flex"]{
         flex-direction:column !important;
     }
-    
+    /*------MOBILE FIX---------*/
+    @media (max-width: 768px){
+        .menu-toggle{ display: block !important;
+                    }
+        .nav-links{
+            display: none !important;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background: #0a0a0f;
+            flex-direction: column;
+            padding: 20px;
+            z-index: 999;
+        }
+        .nav-links.active{
+            display: flex !important;
+        }
+        .hero, .section:first-of-type{
+            padding-top: 70px !important;
+            min-height: auto !important;
+            margin-top: 0 ! important;
+        }
+        .hero::before, .glow, .blur, [class*="glow"], [class*="blur"], [class*="bg-"]{
+            height: 120px !important;
+        }
+    }
+            
     /*Center everything that was left aligned */
     section, .container{
         align-items: center !important;
@@ -20,7 +47,8 @@
     font-size :28px !important;
     line-height: 1.2;
     }
-    }
+
+    
     root {
     --bg-main: #0B0F19;
     --bg-card: rgba(17, 24, 39, 0.7);
@@ -62,7 +90,8 @@ body {
     padding: 0 24px;
 }
 
-/* --- Reusable Components --- */
+        
+            /* --- Reusable Components --- */
 .text-gradient {
     background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--accent-purple) 100%);
     -webkit-background-clip: text;
