@@ -8,7 +8,15 @@
     @media (max-width: 768px){
         .nav-links{
             display: none; /*hide on mobile*/
+        
                     }
+
+        /*on mobile */
+        @media (max-width: 768px){
+            .nav-links{
+                display: none;
+            }
+        }
         .nav-links{
             display: none !important;
             position: absolute;
@@ -93,6 +101,7 @@ html {
 
 body {
      width: 100;
+    margin: 0;
     overflow: hidden;
     background-color: var(--bg-main);
     color: var(--text-primary);
