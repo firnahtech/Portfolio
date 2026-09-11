@@ -29,6 +29,7 @@
             padding: 20px 0;
         }
     }
+
     @media (max-width: 480px){
         .hero-glow {
             width: 200px;
