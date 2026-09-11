@@ -29,6 +29,16 @@
             padding: 20px 0;
         }
     }
+    @media (max-width: 480px){
+        .hero-glow {
+            width: 200px;
+            height:200px;
+            top: -20px;
+            right: -20px;
+            filter: blur(30px);
+            opacity: 0.6;
+        }
+    }
         .hero, .section:first-of-type{
             padding-top: 70px !important;
             min-height: auto !important;
